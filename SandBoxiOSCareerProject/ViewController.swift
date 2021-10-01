@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //This is the main storyboard view controller
+        print("Starting the iPhone Application")
     }
 
 
