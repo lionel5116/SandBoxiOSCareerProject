@@ -58,6 +58,10 @@
                             <constraint firstItem="lmH-QK-nVI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yyO-sm-PnU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSelectLesson" destination="lmH-QK-nVI" id="Dip-VB-az1"/>
+                        <outlet property="pkvLessonSelect" destination="vTT-7f-s6v" id="m88-ba-Hlk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
