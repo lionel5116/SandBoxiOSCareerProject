@@ -17,38 +17,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Social Scene  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jty-tp-oKh">
-                                <rect key="frame" x="98.333333333333329" y="166" width="231.33333333333337" height="123"/>
+                                <rect key="frame" x="98.333333333333329" y="218" width="231.33333333333337" height="123"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or Create and Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5Y-XJ-Agu">
-                                <rect key="frame" x="61.333333333333343" y="299" width="305.66666666666663" height="30"/>
+                                <rect key="frame" x="61.333333333333343" y="351" width="305.66666666666663" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in with Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC8-vy-VGM">
-                                <rect key="frame" x="133" y="349" width="162.33333333333337" height="24"/>
+                                <rect key="frame" x="133" y="401" width="162.33333333333337" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-7f-s6v">
-                                <rect key="frame" x="54" y="448" width="320" height="216"/>
+                                <rect key="frame" x="54" y="500" width="320" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmH-QK-nVI">
-                                <rect key="frame" x="159.66666666666666" y="699" width="108.66666666666666" height="31"/>
+                                <rect key="frame" x="159.66666666666666" y="751" width="108.66666666666666" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="btn-Selected"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HH-2X-4zR">
+                                <rect key="frame" x="128" y="822" width="172.33333333333337" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Segue to Travel Details"/>
+                                <connections>
+                                    <segue destination="VZZ-Fi-uMO" kind="show" id="JP2-XM-bX4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6HH-2X-4zR" firstAttribute="top" secondItem="lmH-QK-nVI" secondAttribute="bottom" constant="40" id="6CV-2X-GOK"/>
                             <constraint firstItem="VC8-vy-VGM" firstAttribute="top" secondItem="P5Y-XJ-Agu" secondAttribute="bottom" constant="20" id="AlK-bK-AaA"/>
                             <constraint firstItem="P5Y-XJ-Agu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BD4-7U-zWY"/>
                             <constraint firstItem="lmH-QK-nVI" firstAttribute="top" secondItem="vTT-7f-s6v" secondAttribute="bottom" constant="35" id="CAP-Oi-O2p"/>
+                            <constraint firstItem="6HH-2X-4zR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DDc-BI-2us"/>
                             <constraint firstItem="Jty-tp-oKh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MAP-hd-xAO"/>
                             <constraint firstItem="Jty-tp-oKh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="Rl2-wo-Vak"/>
                             <constraint firstItem="vTT-7f-s6v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sd5-Gy-gPu"/>
@@ -66,15 +76,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031.7757009345794" y="86.825053995680349"/>
+            <point key="canvasLocation" x="562" y="78"/>
+        </scene>
+        <!--Trave Details View Controller-->
+        <scene sceneID="UpZ-jc-rkf">
+            <objects>
+                <viewController storyboardIdentifier="sbdIDTravelDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VZZ-Fi-uMO" customClass="TraveDetailsViewController" customModule="SandBoxiOSCareerProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8je-eA-3VW">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XnB-KX-ilg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kwj-sP-pT1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ej6-eP-oLi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oGJ-AP-XZl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QmZ-Ty-bYi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yD0-nH-XHP">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="yD0-nH-XHP">
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -84,7 +110,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vem-0K-cAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.77570093457942" y="86.825053995680349"/>
+            <point key="canvasLocation" x="-191" y="78"/>
         </scene>
     </scenes>
     <resources>

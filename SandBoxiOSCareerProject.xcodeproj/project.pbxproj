@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1588F6FB27080CE5006C2530 /* TraveDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1588F6FA27080CE5006C2530 /* TraveDetailsViewController.swift */; };
 		15A2236A2707AA8B0036FC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A223692707AA8B0036FC9A /* AppDelegate.swift */; };
 		15A2236C2707AA8B0036FC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A2236B2707AA8B0036FC9A /* SceneDelegate.swift */; };
 		15A2236E2707AA8B0036FC9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A2236D2707AA8B0036FC9A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1588F6FA27080CE5006C2530 /* TraveDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraveDetailsViewController.swift; sourceTree = "<group>"; };
 		15A223662707AA8B0036FC9A /* SandBoxiOSCareerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandBoxiOSCareerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A223692707AA8B0036FC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15A2236B2707AA8B0036FC9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				15A223692707AA8B0036FC9A /* AppDelegate.swift */,
+				1588F6FA27080CE5006C2530 /* TraveDetailsViewController.swift */,
 				15A2236B2707AA8B0036FC9A /* SceneDelegate.swift */,
 				15A2236D2707AA8B0036FC9A /* ViewController.swift */,
 				15A2236F2707AA8B0036FC9A /* Main.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1588F6FB27080CE5006C2530 /* TraveDetailsViewController.swift in Sources */,
 				15A2236E2707AA8B0036FC9A /* ViewController.swift in Sources */,
 				15A2236A2707AA8B0036FC9A /* AppDelegate.swift in Sources */,
 				15A2236C2707AA8B0036FC9A /* SceneDelegate.swift in Sources */,
