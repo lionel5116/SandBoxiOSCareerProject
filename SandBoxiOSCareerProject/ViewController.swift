@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     private let dataSource = ["Button Image",
                               "Constraints",
                               "Background Layout",
-                              "Media Design"]
+                              "Media Design",
+                              "Travel Details"]
 
     @IBOutlet weak var btnSelectLesson: UIButton!
     @IBOutlet weak var pkvLessonSelect: UIPickerView!
@@ -26,6 +27,25 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func btnSelectLessonAction(_ sender: Any) {
+        let titleValue = btnSelectLesson.titleLabel?.text;
+        print(titleValue!);
+        
+        switch titleValue {
+        case "Travel Details":
+            
+            print(" You are going to Travel Details");
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vcTravelDetails = storyboard.instantiateViewController(withIdentifier: "sbdIDTravelDetails")
+            self.navigationController!.pushViewController(vcTravelDetails, animated: true)
+        case "Constraints  ":
+            print(" You are going to Lesson - Constraints");
+        default:
+            print("You are not  going anywhere...")
+        }
+        
+        
+    }
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
