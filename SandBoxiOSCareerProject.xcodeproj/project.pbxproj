@@ -14,6 +14,8 @@
 		15A223712707AA8B0036FC9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A2236F2707AA8B0036FC9A /* Main.storyboard */; };
 		15A223732707AA8C0036FC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A223722707AA8C0036FC9A /* Assets.xcassets */; };
 		15A223762707AA8C0036FC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A223742707AA8C0036FC9A /* LaunchScreen.storyboard */; };
+		15E8D17427093D4A001B31AC /* CodeWithChrisLoginPage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15E8D17327093D4A001B31AC /* CodeWithChrisLoginPage.xcassets */; };
+		15E8D17627093DFD001B31AC /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E8D17527093DFD001B31AC /* LoginPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		15A223722707AA8C0036FC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15A223752707AA8C0036FC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15A223772707AA8C0036FC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15E8D17327093D4A001B31AC /* CodeWithChrisLoginPage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CodeWithChrisLoginPage.xcassets; sourceTree = "<group>"; };
+		15E8D17527093DFD001B31AC /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +67,11 @@
 				15A2236B2707AA8B0036FC9A /* SceneDelegate.swift */,
 				15A2236D2707AA8B0036FC9A /* ViewController.swift */,
 				15A2236F2707AA8B0036FC9A /* Main.storyboard */,
+				15E8D17527093DFD001B31AC /* LoginPageViewController.swift */,
 				15A223722707AA8C0036FC9A /* Assets.xcassets */,
 				15A223742707AA8C0036FC9A /* LaunchScreen.storyboard */,
 				15A223772707AA8C0036FC9A /* Info.plist */,
+				15E8D17327093D4A001B31AC /* CodeWithChrisLoginPage.xcassets */,
 			);
 			path = SandBoxiOSCareerProject;
 			sourceTree = "<group>";
@@ -129,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A223762707AA8C0036FC9A /* LaunchScreen.storyboard in Resources */,
+				15E8D17427093D4A001B31AC /* CodeWithChrisLoginPage.xcassets in Resources */,
 				15A223732707AA8C0036FC9A /* Assets.xcassets in Resources */,
 				15A223712707AA8B0036FC9A /* Main.storyboard in Resources */,
 			);
@@ -144,6 +151,7 @@
 				1588F6FB27080CE5006C2530 /* TraveDetailsViewController.swift in Sources */,
 				15A2236E2707AA8B0036FC9A /* ViewController.swift in Sources */,
 				15A2236A2707AA8B0036FC9A /* AppDelegate.swift in Sources */,
+				15E8D17627093DFD001B31AC /* LoginPageViewController.swift in Sources */,
 				15A2236C2707AA8B0036FC9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
