@@ -283,6 +283,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Add New Person">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="acAddPerson:" destination="egy-4Q-Fme" eventType="touchUpInside" id="dc6-6v-E0y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="goe-l3-bUh"/>
@@ -298,6 +301,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAddPerson" destination="SBb-gE-mdC" id="1FA-2p-LvG"/>
                         <outlet property="tableView" destination="e4g-VN-1Fe" id="RbG-2g-jba"/>
                     </connections>
                 </viewController>

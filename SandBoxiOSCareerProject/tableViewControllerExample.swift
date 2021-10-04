@@ -10,6 +10,8 @@ import UIKit
 class tableViewControllerExample: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var btnAddPerson: UIButton!
+    
     
     let contacts = ["Ferron Brown",
                     "Mark Tyson",
@@ -26,6 +28,9 @@ class tableViewControllerExample: UIViewController {
         tableView.dataSource = self;
     }
 
+    @IBAction func acAddPerson(_ sender: Any) {
+        print("You added a person");
+    }
 }
 
 
