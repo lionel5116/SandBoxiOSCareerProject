@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     private let dataSource = ["Button Image Login Page",
-                              "Constraints",
+                              "War Game",
                               "Background Layout",
                               "Media Design",
                               "Travel Details"]
@@ -38,11 +38,20 @@ class ViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vcTravelDetails = storyboard.instantiateViewController(withIdentifier: "sbdIDTravelDetails")
             self.navigationController!.pushViewController(vcTravelDetails, animated: true)
+        
         case "Button Image Login Page":
+            
             print(" You are going to Lesson - Button Image Login Page");
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vcLoginPage = storyboard.instantiateViewController(withIdentifier: "sbIDLoginPage")
             self.navigationController!.pushViewController(vcLoginPage, animated: true)
+            
+        case "War Game":
+            print(" You are going to Lesson - Button Image Login Page");
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vcWarGame = storyboard.instantiateViewController(withIdentifier: "sbIDWarGameVC")
+            self.navigationController!.pushViewController(vcWarGame, animated: true)
+           
         default:
             print("You are not  going anywhere...")
         }

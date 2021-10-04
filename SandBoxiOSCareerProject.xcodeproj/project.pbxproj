@@ -16,6 +16,8 @@
 		15A223762707AA8C0036FC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A223742707AA8C0036FC9A /* LaunchScreen.storyboard */; };
 		15E8D17427093D4A001B31AC /* CodeWithChrisLoginPage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15E8D17327093D4A001B31AC /* CodeWithChrisLoginPage.xcassets */; };
 		15E8D17627093DFD001B31AC /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E8D17527093DFD001B31AC /* LoginPageViewController.swift */; };
+		15FAC938270A756500856B11 /* MediaForWarCardGame.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FAC937270A756500856B11 /* MediaForWarCardGame.xcassets */; };
+		15FAC93A270A76A600856B11 /* WarCardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FAC939270A76A600856B11 /* WarCardGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		15A223772707AA8C0036FC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15E8D17327093D4A001B31AC /* CodeWithChrisLoginPage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CodeWithChrisLoginPage.xcassets; sourceTree = "<group>"; };
 		15E8D17527093DFD001B31AC /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		15FAC937270A756500856B11 /* MediaForWarCardGame.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MediaForWarCardGame.xcassets; sourceTree = "<group>"; };
+		15FAC939270A76A600856B11 /* WarCardGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarCardGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +71,13 @@
 				15A2236B2707AA8B0036FC9A /* SceneDelegate.swift */,
 				15A2236D2707AA8B0036FC9A /* ViewController.swift */,
 				15A2236F2707AA8B0036FC9A /* Main.storyboard */,
+				15FAC939270A76A600856B11 /* WarCardGameViewController.swift */,
 				15E8D17527093DFD001B31AC /* LoginPageViewController.swift */,
 				15A223722707AA8C0036FC9A /* Assets.xcassets */,
 				15A223742707AA8C0036FC9A /* LaunchScreen.storyboard */,
 				15A223772707AA8C0036FC9A /* Info.plist */,
 				15E8D17327093D4A001B31AC /* CodeWithChrisLoginPage.xcassets */,
+				15FAC937270A756500856B11 /* MediaForWarCardGame.xcassets */,
 			);
 			path = SandBoxiOSCareerProject;
 			sourceTree = "<group>";
@@ -138,6 +144,7 @@
 				15E8D17427093D4A001B31AC /* CodeWithChrisLoginPage.xcassets in Resources */,
 				15A223732707AA8C0036FC9A /* Assets.xcassets in Resources */,
 				15A223712707AA8B0036FC9A /* Main.storyboard in Resources */,
+				15FAC938270A756500856B11 /* MediaForWarCardGame.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +160,7 @@
 				15A2236A2707AA8B0036FC9A /* AppDelegate.swift in Sources */,
 				15E8D17627093DFD001B31AC /* LoginPageViewController.swift in Sources */,
 				15A2236C2707AA8B0036FC9A /* SceneDelegate.swift in Sources */,
+				15FAC93A270A76A600856B11 /* WarCardGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
