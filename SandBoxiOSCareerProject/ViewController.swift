@@ -11,9 +11,8 @@ class ViewController: UIViewController {
     
     private let dataSource = ["Button Image Login Page",
                               "War Game",
-                              "Background Layout",
-                              "Media Design",
-                              "Travel Details"]
+                              "Travel Details",
+                              "Table VC Example"]
 
     @IBOutlet weak var btnSelectLesson: UIButton!
     @IBOutlet weak var pkvLessonSelect: UIPickerView!
@@ -52,6 +51,12 @@ class ViewController: UIViewController {
             let vcWarGame = storyboard.instantiateViewController(withIdentifier: "sbIDWarGameVC")
             self.navigationController!.pushViewController(vcWarGame, animated: true)
            
+        case "Table VC Example":
+            print(" Yoy are to to Table View Controller");
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vcTableVC = storyboard.instantiateViewController(withIdentifier: "sbIDTableVC")
+            self.navigationController!.pushViewController(vcTableVC, animated: true)
+        
         default:
             print("You are not  going anywhere...")
         }

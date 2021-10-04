@@ -255,6 +255,56 @@
             </objects>
             <point key="canvasLocation" x="2728.0373831775701" y="69.97840172786178"/>
         </scene>
+        <!--Table View Controller Example-->
+        <scene sceneID="J1L-hf-Mcx">
+            <objects>
+                <viewController storyboardIdentifier="sbIDTableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="egy-4Q-Fme" customClass="tableViewControllerExample" customModule="SandBoxiOSCareerProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vNf-hI-pWy">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="e4g-VN-1Fe">
+                                <rect key="frame" x="0.0" y="220" width="428" height="672"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="meg-HD-5ig">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="meg-HD-5ig" id="bIT-Ub-2c8">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBb-gE-mdC">
+                                <rect key="frame" x="83" y="157" width="201" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add New Person">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="goe-l3-bUh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SBb-gE-mdC" firstAttribute="leading" secondItem="goe-l3-bUh" secondAttribute="leading" constant="83" id="2Zy-Of-Jjf"/>
+                            <constraint firstItem="e4g-VN-1Fe" firstAttribute="centerX" secondItem="vNf-hI-pWy" secondAttribute="centerX" id="HM0-UN-ECk"/>
+                            <constraint firstItem="SBb-gE-mdC" firstAttribute="top" secondItem="goe-l3-bUh" secondAttribute="top" constant="113" id="fRV-rL-EVK"/>
+                            <constraint firstItem="e4g-VN-1Fe" firstAttribute="bottom" secondItem="goe-l3-bUh" secondAttribute="bottom" id="hYF-h9-NYr"/>
+                            <constraint firstItem="e4g-VN-1Fe" firstAttribute="top" secondItem="SBb-gE-mdC" secondAttribute="bottom" constant="25" id="uDe-PZ-fWB"/>
+                            <constraint firstItem="e4g-VN-1Fe" firstAttribute="leading" secondItem="goe-l3-bUh" secondAttribute="leading" id="v1N-aT-Fjl"/>
+                            <constraint firstItem="goe-l3-bUh" firstAttribute="trailing" secondItem="SBb-gE-mdC" secondAttribute="trailing" constant="144" id="wMg-yj-FRZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="e4g-VN-1Fe" id="RbG-2g-jba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AmU-4E-mbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3469.6261682242989" y="72.570194384449252"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="oGJ-AP-XZl">
             <objects>
