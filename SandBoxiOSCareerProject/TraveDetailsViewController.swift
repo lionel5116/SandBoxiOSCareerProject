@@ -36,15 +36,16 @@ class TraveDetailsViewController: UIViewController {
         
         var _lstTD : [TravelDetails] = [];
         
-        //createSQLiteDatabase();
         var my_DB : OpaquePointer? = nil;
-        my_DB = createSQLiteDatabase();
+        my_DB = createSQLiteDatabase();  //create the database first to get the database pointer
         //self.createTable(_db:my_DB);
         //self.insertData(name:_name,country:_country,budget:_budget,_db:my_DB,list:_lstTD);
         _lstTD = self.readDB(_db:my_DB);
         print(_lstTD[0].name!);
         print(_lstTD[0].country!);
         print(_lstTD[0].budget);
+        
+        //sqlite3_close(my_DB); //close the database
     }
     
     func createSQLiteDatabase() -> OpaquePointer? {
