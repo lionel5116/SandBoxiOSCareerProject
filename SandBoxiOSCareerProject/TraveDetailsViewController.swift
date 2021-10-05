@@ -30,10 +30,17 @@ class TraveDetailsViewController: UIViewController {
     
     @IBAction func acCreateDatabase(_ sender: Any) {
         
+        let _name: String = "David Jones";
+        let _country: String = "SJO";
+        let _budget: Double = 76000.00;
+        
+        var _lstTD : [TravelDetails] = [];
+        
         //createSQLiteDatabase();
         var my_DB : OpaquePointer? = nil;
         my_DB = createSQLiteDatabase();
         self.createTable(_db:my_DB);
+        self.insertData(name:_name,country:_country,budget:_budget,_db:my_DB,list:_lstTD);
     }
     
     func createSQLiteDatabase() -> OpaquePointer? {
@@ -55,9 +62,7 @@ class TraveDetailsViewController: UIViewController {
     
     func createTable(_db: OpaquePointer?) {
         
-        let _name: String = "David Jones";
-        let _country: String = "SJO";
-        let _budget: Double = 76000.00;
+        
         
         //create a table for our sqlite database
         let createTableQuery = "CREATE TABLE IF NOT EXISTS TravelDetails (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, country TEXT, budget REAL)";
@@ -67,16 +72,34 @@ class TraveDetailsViewController: UIViewController {
         }
         else {
             print("Creation of table sucess!!!");
-            insertData(name:_name,country:_country,budget:_budget,_db:_db);
+            //insertData(name:_name,country:_country,budget:_budget,_db:_db);
         }
     }
     
-    func insertData(name: String, country: String, budget: Double,_db: OpaquePointer?) {
+    func insertData(name: String, country: String, budget: Double,_db: OpaquePointer?,list: [TravelDetails]) {
         //https://www.youtube.com/watch?v=2v0vY-u4ItA
+        //we have already inserted firsr record with ID, don't neeed to insert subsequent with id, it is auto increment
+        //let query = "INSERT INTO TravelDetails (id,name,country,budget) VALUES (?,?,?,?)";
         let query = "INSERT INTO TravelDetails (name,country,budget) VALUES (?,?,?)";
         var statement : OpaquePointer? = nil;
         if sqlite3_prepare_v2(_db,query, -1, &statement, nil) == SQLITE_OK {
-            print("Query for Insert Successful!!!");
+            //we have already inserted firsr record with ID, don't neeed to insert subsequent
+            //sqlite3_bind_int(statement,1,1);
+            sqlite3_bind_text(statement,1, (name as NSString).utf8String,-1,nil);
+            sqlite3_bind_text(statement,2, (country as NSString).utf8String,-1,nil);
+            sqlite3_bind_double(statement,3,budget);
+            
+            //print("Query for Insert Successful!!!");
+            
+            let data = try! JSONEncoder().encode(list)
+            let listString = String(data:data, encoding: .utf8);
+            sqlite3_bind_text(statement, 5, (listString! as NSString).utf8String, -1,nil);
+            if sqlite3_step(statement) == SQLITE_DONE {
+                print("Data inserted successfully!!!");
+            }
+            else{
+                print("Data did not insert successfully!!!");
+            }
         }
         else {
             print("Query is not valid!!!");
