@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     private let dataSource = ["Button Image Login Page",
                               "War Game",
-                              "Travel Details",
+                              "Travel Details SQLite3",
                               "Table VC Example"]
 
     @IBOutlet weak var btnSelectLesson: UIButton!
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         print(titleValue!);
         
         switch titleValue {
-        case "Travel Details":
+        case "Travel Details SQLite3":
             
             print(" You are going to Travel Details");
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
