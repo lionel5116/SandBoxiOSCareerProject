@@ -42,7 +42,7 @@ class tableViewControllerExample: UIViewController {
     }
     
     func fetchPeople() {
-        //try! context.fetch(Person.fetchRequest());
+        //try! context.fetch(Person.fetchRequest()); ...
         do {
             self.items =  try context.fetch(Person.fetchRequest());
             
