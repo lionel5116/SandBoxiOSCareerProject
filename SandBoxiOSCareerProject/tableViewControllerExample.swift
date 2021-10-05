@@ -14,6 +14,15 @@ class tableViewControllerExample: UIViewController {
     @IBOutlet weak var btnAddPerson: UIButton!
     
     
+    /*CORE DATA WIREUP*/
+    /*Reference to the managed object context */
+    /*REMEMBER THE APPDELETE FILE CORE DATA ADDED TO OUR APP DELEGATE - WE ARE ACCESSING IT'S METHOD */
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
+    
+    /*Data for the tableview */
+    var items:[Person]?
+    
+    
     var contacts = ["Ferron Brown",
                     "Mark Tyson",
                     "Dac Black",
@@ -27,10 +36,55 @@ class tableViewControllerExample: UIViewController {
         //assign the delegate and datasource for our tableview
         tableView.delegate = self;
         tableView.dataSource = self;
+        
+        //GET ITEMS FROM CORE DATA
+        fetchPeople();
+    }
+    
+    func fetchPeople() {
+        //try! context.fetch(Person.fetchRequest());
+        do {
+            self.items =  try context.fetch(Person.fetchRequest());
+            
+            /*Do this on the main thread */
+            DispatchQueue.main.async {
+                self.tableView.reloadData();
+            }
+            
+        } catch{}
     }
 
     @IBAction func acAddPerson(_ sender: Any) {
         print("You added a person");
+        //Create alert
+        let alert = UIAlertController(title: "Add Person", message: "What is their name", preferredStyle: .alert);
+        alert.addTextField();
+        
+        //Configure button handler
+        let submitButton = UIAlertAction(title: "Add", style: .default) {
+            (action) in
+            
+            //Get the textfield for the alert
+            let textfield = alert.textFields![0];
+            
+            //create a person object to add to core data
+            let newPerson = Person(context: self.context);
+            newPerson.name = textfield.text;
+            newPerson.gender = "Male";
+            
+            //Save the data to core Data
+            try!self.context.save();
+            
+            
+            //Re-fetch the data
+            self.fetchPeople();
+            
+        }
+        
+        //add the action (submit button action to the alert
+        alert.addAction(submitButton);
+        //show the alert
+        self.present(alert, animated: true, completion: nil);
     }
     
     
@@ -51,6 +105,8 @@ class tableViewControllerExample: UIViewController {
     private func makeDeleteContextualAction(forRowAt indexPath: IndexPath) -> UIContextualAction {
             return UIContextualAction(style: .destructive, title: "Delete") { (action, swipeButtonView, completion) in
                 print("DELETE HERE")
+               
+                /* This is removing from the original array, will do the core data remove later*/
                 self.contacts.remove(at: indexPath.row);
                 self.tableView.deleteRows(at: [indexPath], with: .automatic);
 
@@ -93,7 +149,8 @@ extension tableViewControllerExample: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //return our array of items .count
-        return contacts.count
+        //return contacts.count
+        return items?.count ?? 0;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -102,7 +159,10 @@ extension tableViewControllerExample: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         //return the items in our array's values for the text label
-        cell.textLabel?.text = contacts[indexPath.row];
+        //cell.textLabel?.text = contacts[indexPath.row];
+        
+        let person = items?[indexPath.row];
+        cell.textLabel?.text = person?.name;
         
         return cell;
     }
