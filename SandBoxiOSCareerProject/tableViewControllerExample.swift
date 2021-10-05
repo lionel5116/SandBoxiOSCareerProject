@@ -73,6 +73,7 @@ class tableViewControllerExample: UIViewController {
             newPerson.gender = "Male";
             
             //Save the data to core Data
+            //below you can use if you don't want a catch block
             try!self.context.save();
             
             
@@ -107,9 +108,21 @@ class tableViewControllerExample: UIViewController {
                 print("DELETE HERE")
                
                 /* This is removing from the original array, will do the core data remove later*/
-                self.contacts.remove(at: indexPath.row);
-                self.tableView.deleteRows(at: [indexPath], with: .automatic);
+                //self.contacts.remove(at: indexPath.row);
+                //self.tableView.deleteRows(at: [indexPath], with: .automatic);
 
+                //Which Person to remove
+                let personToRemove = self.items![indexPath.row];
+                
+                //remove the person
+                self.context.delete(personToRemove);
+                
+                //save the data
+                try!self.context.save();
+                
+                //re-fech the data
+                self.fetchPeople();
+                
                 completion(true)
             }
     }
