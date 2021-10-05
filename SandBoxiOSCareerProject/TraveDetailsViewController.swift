@@ -30,17 +30,21 @@ class TraveDetailsViewController: UIViewController {
     
     @IBAction func acCreateDatabase(_ sender: Any) {
         
-        let _name: String = "David Jones";
-        let _country: String = "SJO";
-        let _budget: Double = 76000.00;
+        //let _name: String = "David Jones";
+        //let _country: String = "SJO";
+        //let _budget: Double = 76000.00;
         
         var _lstTD : [TravelDetails] = [];
         
         //createSQLiteDatabase();
         var my_DB : OpaquePointer? = nil;
         my_DB = createSQLiteDatabase();
-        self.createTable(_db:my_DB);
-        self.insertData(name:_name,country:_country,budget:_budget,_db:my_DB,list:_lstTD);
+        //self.createTable(_db:my_DB);
+        //self.insertData(name:_name,country:_country,budget:_budget,_db:my_DB,list:_lstTD);
+        _lstTD = self.readDB(_db:my_DB);
+        print(_lstTD[0].name!);
+        print(_lstTD[0].country!);
+        print(_lstTD[0].budget);
     }
     
     func createSQLiteDatabase() -> OpaquePointer? {
@@ -104,5 +108,25 @@ class TraveDetailsViewController: UIViewController {
         else {
             print("Query is not valid!!!");
         }
+    }
+    
+    func readDB(_db: OpaquePointer?) -> [TravelDetails] {
+        var _list = [TravelDetails]();
+        let query = "SELECT name,country,budget FROM TravelDetails";
+        var statement : OpaquePointer? = nil;
+        if sqlite3_prepare_v2(_db,query, -1, &statement, nil) == SQLITE_OK {
+            while sqlite3_step(statement) == SQLITE_ROW {
+                let _name = String(cString: sqlite3_column_text(statement,0));
+                let _country = String(cString :sqlite3_column_text(statement,1));
+                let _budget = Double(sqlite3_column_double(statement,2));
+                
+                let model = TravelDetails();
+                model.name = _name;
+                model.country = _country;
+                model.budget = _budget;
+                _list.append(model);
+            }
+        }
+        return _list;
     }
 }
