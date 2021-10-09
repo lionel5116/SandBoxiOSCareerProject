@@ -89,9 +89,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUG-zZ-yuN">
-                                <rect key="frame" x="90" y="189" width="235" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUG-zZ-yuN">
+                                <rect key="frame" x="128.66666666666669" y="444" width="170.66666666666669" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create Database">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -103,6 +102,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XnB-KX-ilg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZUG-zZ-yuN" firstAttribute="centerY" secondItem="8je-eA-3VW" secondAttribute="centerY" id="Tsv-cJ-ysp"/>
+                            <constraint firstItem="ZUG-zZ-yuN" firstAttribute="centerX" secondItem="8je-eA-3VW" secondAttribute="centerX" id="q72-NX-afP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kwj-sP-pT1"/>
                     <connections>
