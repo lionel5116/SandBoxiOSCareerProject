@@ -35,5 +35,15 @@ class WarCardGameViewController: UIViewController {
 
     @IBAction func dealTapped(_ sender: Any) {
         print("Deal tapped with new connection!!");
+        let leftNumber = Int.random(in: 2...14);
+        let RightNumber = Int.random(in: 2...14);
+        print (leftNumber);
+        print (RightNumber);
+        
+        let leftRand = "card" + "" + String(leftNumber);
+        let  rightRand = "card" + "" + String(RightNumber);
+        
+        leftImageView.image = UIImage(named: leftRand);
+        rightImageView.image = UIImage(named: rightRand);
     }
 }
