@@ -8,23 +8,32 @@
 import UIKit
 
 class WarCardGameViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var leftImageView: UIImageView!
+    @IBOutlet weak var rightImageView: UIImageView!
+    
+    @IBOutlet weak var leftScoreLabel: UILabel!
+    @IBOutlet weak var rightScoreLabel: UILabel!
+    
+    @IBOutlet weak var btnGamePlayButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         title = "Lets WAR IT";
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func playAGame(_ sender: Any) {
+        print("Deal tapped!!");
     }
-    */
+    
+    
 
+    @IBAction func dealTapped(_ sender: Any) {
+        print("Deal tapped with new connection!!");
+    }
 }

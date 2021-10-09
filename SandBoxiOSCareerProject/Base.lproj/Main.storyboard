@@ -214,6 +214,9 @@
                                         <buttonConfiguration key="configuration" style="plain">
                                             <backgroundConfiguration key="background" image="dealbutton"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="Uaj-DE-p2j" eventType="touchUpInside" id="YeJ-5Y-07J"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -269,6 +272,13 @@
                             <constraint firstItem="3Hz-We-QwF" firstAttribute="centerX" secondItem="Gh0-h9-5ft" secondAttribute="centerX" id="zkc-O3-DKj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnGamePlayButton" destination="tgo-ec-Uie" id="o5I-0c-LtR"/>
+                        <outlet property="leftImageView" destination="te8-Ne-rb0" id="Xjv-mv-22R"/>
+                        <outlet property="leftScoreLabel" destination="aKU-Gw-RsP" id="d6z-ro-i84"/>
+                        <outlet property="rightImageView" destination="9Dm-sJ-Ngz" id="ist-0i-hdS"/>
+                        <outlet property="rightScoreLabel" destination="aKU-Gw-RsP" id="VgQ-cg-sbX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHb-Hz-Txp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
