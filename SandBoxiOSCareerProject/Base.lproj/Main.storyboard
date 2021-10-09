@@ -275,7 +275,7 @@
                     <connections>
                         <outlet property="btnGamePlayButton" destination="tgo-ec-Uie" id="o5I-0c-LtR"/>
                         <outlet property="leftImageView" destination="te8-Ne-rb0" id="Xjv-mv-22R"/>
-                        <outlet property="leftScoreLabel" destination="aKU-Gw-RsP" id="d6z-ro-i84"/>
+                        <outlet property="leftScoreLabel" destination="qzl-v5-WJa" id="gCV-TO-kpQ"/>
                         <outlet property="rightImageView" destination="9Dm-sJ-Ngz" id="ist-0i-hdS"/>
                         <outlet property="rightScoreLabel" destination="aKU-Gw-RsP" id="VgQ-cg-sbX"/>
                     </connections>

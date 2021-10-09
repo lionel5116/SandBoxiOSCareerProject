@@ -18,6 +18,9 @@ class WarCardGameViewController: UIViewController {
     
     @IBOutlet weak var btnGamePlayButton: UIButton!
     
+    var _leftScore = 0;
+    var _rightScore = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +41,9 @@ class WarCardGameViewController: UIViewController {
         let leftNumber = Int.random(in: 2...14);
         let rightNumber = Int.random(in: 2...14);
        
+        print("left hand \(leftNumber)");
+        print("right hand \(rightNumber)");
+        
         /*
         let leftRand = "card" + "" + String(leftNumber);
         let  rightRand = "card" + "" + String(RightNumber);
@@ -45,5 +51,19 @@ class WarCardGameViewController: UIViewController {
         
         leftImageView.image = UIImage(named: "card\(leftNumber)");
         rightImageView.image = UIImage(named: "card\(rightNumber)");
+        
+        if leftNumber > rightNumber {
+            _leftScore += 1;
+            leftScoreLabel.text = String(_leftScore);
+           
+        }
+        else if rightNumber >  leftNumber {
+            _rightScore += 1;
+            rightScoreLabel.text = String(_rightScore);
+     
+        }
+        else {
+            
+        }
     }
 }
